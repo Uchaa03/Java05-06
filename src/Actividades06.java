@@ -23,10 +23,9 @@ public class Actividades06 {
 
     // 3. siguientePrimo: Devuelve el menor primo mayor al número dado
     public static int siguientePrimo(int numero) {
-        numero++;
-        while (!esPrimo(numero)) {
+        do {
             numero++;
-        }
+        } while (!esPrimo(numero));
         return numero;
     }
 
@@ -58,5 +57,16 @@ public class Actividades06 {
         } else {
             return -1;  // Retorna -1 si la posición es inválida
         }
+    }
+
+    public static void main(String[] args) {
+        // Probar las funciones
+        System.out.println("Es capicúa (121): " + esCapicua(121));  // true
+        System.out.println("Es primo (7): " + esPrimo(7));  // true
+        System.out.println("Siguiente primo de 10: " + siguientePrimo(10));  // 11
+        System.out.println("Potencia (2^3): " + potencia(2, 3));  // 8.0
+        System.out.println("Dígitos en 12345: " + digitos(12345));  // 5
+        System.out.println("Número volteado de 1234: " + voltea(1234));  // 4321
+        System.out.println("Dígito en posición 2 de 12345: " + digitoN(12345, 2));  // 3
     }
 }
